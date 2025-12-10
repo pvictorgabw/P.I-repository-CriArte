@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/Img/pincel_icon.png">
+    <title>Painel Admin - CriArt</title>
+    <link rel="stylesheet" href="static/cabecalho.css">
+    <link rel="stylesheet" href="static/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <div class="top-bar">
+            <a href="index.html"><img class="logo" src="static/Img/Logo CriArt.png" alt="CriART"></a>
+            
+            <div class="search">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" id="searchinput" placeholder="Pesquisar produtos">
+            </div>
+            
+            <div class="login">
+                <a class="user-link" href="perfil.html" style="text-decoration: none; color: inherit;" title="Perfil Admin">
+                    <i class='bx bxs-user-check'></i>
+                    <span class="online-dot" aria-hidden="true"></span>
+                </a>
+                <div class="carinho">
+                    <a href="CARRINHOCRIART.html" style="text-decoration: none; color: inherit;"><i class='bx bx-cart'></i></a>
+                    <span class="conta">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="cartegoria">
+            <li><a href="admin.html#produtos" style="text-decoration: none;">PRODUTOS</a></li>
+            <li><a href="admin.html#planos" style="text-decoration: none;">PLANOS</a></li>
+            <li><a href="admin.html#relatorios" style="text-decoration: none;">RELATÓRIOS</a></li>
+            <li><a href="index.html" style="text-decoration: none;">SAIR</a></li>
+        </ul>
+    </header>
+
+    <!-- TÍTULO -->
+    <h1 id="titulo">PAINEL ADMINISTRATIVO</h1>
+
+    <!-- SEÇÃO DE PERFIL DO ADMIN -->
+    <section id="perfil-admin" class="perfil-admin-section">
+        <div class="container">
+            <h2 class="section-title">Perfil de Administrador</h2>
+
+            <div class="perfil-content">
+                <div class="perfil-form-container">
+                    <div class="perfil-form-group">
+                        <h3><i class="fas fa-envelope"></i> Alterar Email</h3>
+                        <form id="form-alterar-email" class="form-perfil">
+                            <div class="form-group">
+                                <label for="email-atual">Email Atual:</label>
+                                <input type="email" id="email-atual" placeholder="seu@email.com" disabled style="background:#f0f0f0;">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-novo">Novo Email:</label>
+                                <input type="email" id="email-novo" placeholder="novo@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-confirmar">Confirmar Novo Email:</label>
+                                <input type="email" id="email-confirmar" placeholder="novo@email.com" required>
+                            </div>
+                            <button type="submit" class="btn-submit-perfil">
+                                <i class="fas fa-check"></i> Atualizar Email
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="perfil-form-group">
+                        <h3><i class="fas fa-lock"></i> Alterar Senha</h3>
+                        <form id="form-alterar-senha" class="form-perfil">
+                            <div class="form-group">
+                                <label for="senha-atual">Senha Atual:</label>
+                                <input type="password" id="senha-atual" placeholder="••••••••" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="senha-nova">Nova Senha:</label>
+                                <input type="password" id="senha-nova" placeholder="••••••••" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="senha-confirmar">Confirmar Nova Senha:</label>
+                                <input type="password" id="senha-confirmar" placeholder="••••••••" required>
+                            </div>
+                            <button type="submit" class="btn-submit-perfil">
+                                <i class="fas fa-check"></i> Atualizar Senha
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE FILTROS DE PRODUTOS -->
+    <section id="produtos" class="produtos-section">
+        <div class="container">
+            <h2 class="section-title">Gerenciamento de Produtos</h2>
+            
+            <!-- Filtros -->
+            <div class="filtros-container">
+                <h3>Filtrar por Categoria</h3>
+                <div class="filtros-grid" id="filtros-grid">
+                    <div class="filtro-box" data-categoria="canecas">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Canecas</span>
+                    </div>
+                    <div class="filtro-box" data-categoria="blusas">
+                        <i class="fas fa-tshirt"></i>
+                        <span>Blusas</span>
+                    </div>
+                    <div class="filtro-box" data-categoria="camisas">
+                        <i class="fas fa-shirt"></i>
+                        <span>Camisas</span>
+                    </div>
+                    <div class="filtro-box" data-categoria="fardas">
+                        <i class="fas fa-vest"></i>
+                        <span>Fardas</span>
+                    </div>
+                    <div class="filtro-box" data-categoria="chapeus">
+                        <i class="fas fa-hat-cowboy"></i>
+                        <span>Chapéus</span>
+                    </div>
+                    <div class="filtro-box" data-categoria="almofadas">
+                        <i class="fas fa-cube"></i>
+                        <span>Almofadas</span>
+                    </div>
+                    <div class="filtro-box filtro-add" id="btn-adicionar-categoria" style="cursor: pointer;">
+                        <i class="fas fa-plus"></i>
+                        <span>Adicionar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de Produtos -->
+            <div class="produtos-list-container">
+                <h3>Produtos</h3>
+                <div class="produtos-list" id="produtos-list">
+                    <!-- Placeholder: Será preenchido pelo backend -->
+                    <div class="produto-item">
+                        <div class="produto-info">
+                            <h4>Nome do Produto</h4>
+                            <p class="categoria-produto">Categoria: <span>Canecas</span></p>
+                            <p class="preco-produto">Preço: <span>R$ 29,90</span></p>
+                        </div>
+                        <div class="produto-acoes">
+                            <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="btn-deletar"><i class="fas fa-trash"></i> Deletar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Adicionar Produto -->
+            <div class="acao-container">
+                <button class="btn-adicionar-produto" onclick="alert()">
+                    <i class="fas fa-plus"></i> Adicionar Novo Produto
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE RELATÓRIOS -->
+    <section id="relatorios" class="relatorios-section">
+        <div class="container">
+            <h2 class="section-title">Relatórios de Vendas</h2>
+
+            <div class="relatorios-controls">
+                <p>Período rápido:</p>
+                <div class="relatorios-buttons">
+                    <button class="btn-rel" data-period="diario">Hoje</button>
+                    <button class="btn-rel" data-period="semanal">Semana</button>
+                    <button class="btn-rel" data-period="mensal">Mês</button>
+                    <button class="btn-rel" data-period="bimestral">Bimestre</button>
+                    <button class="btn-rel" data-period="trimestral">Trimestre</button>
+                    <button class="btn-rel" data-period="semestral">Semestre</button>
+                    <button class="btn-rel" data-period="anual">Anual</button>
+                </div>
+
+                <div class="relatorios-custom">
+                    <label for="data-inicio">Início</label>
+                    <input type="date" id="data-inicio">
+                    <label for="data-fim">Fim</label>
+                    <input type="date" id="data-fim">
+                    <button id="btn-custom" class="btn-rel">Gerar</button>
+                </div>
+            </div>
+
+            <div class="relatorios-results" id="relatorios-results">
+                <div class="relatorio-summary">
+                    <div class="metric">
+                        <h4>Total Vendas</h4>
+                        <p id="metric-total">R$ 0,00</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Qtd. Pedidos</h4>
+                        <p id="metric-count">0</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Ticket Médio</h4>
+                        <p id="metric-average">R$ 0,00</p>
+                    </div>
+                </div>
+
+                <div class="relatorio-table" id="relatorio-table">
+                    <!-- aqui será inserida a tabela de vendas retornada pelo backend -->
+                    <p style="color:#666; text-align:center;">Nenhum relatório carregado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PLANOS DE SERVIÇOS -->
+    <section id="planos" class="planos-section">
+        <div class="container">
+            <h2 class="section-title">Gerenciamento de Planos de Serviços</h2>
+            
+            <div class="planos-list-container">
+                <h3>Planos Disponíveis</h3>
+                <div class="planos-list" id="planos-list">
+                    <!-- Planos existentes serão listados aqui -->
+                    <div class="plano-item">
+                        <div class="plano-info">
+                            <h4>Logotipos Profissionais</h4>
+                            <p class="descricao-plano">Criamos logotipos exclusivos que refletem a essência da sua marca.</p>
+                            <p class="status-plano">Status: <span class="status-ativo">Ativo</span></p>
+                        </div>
+                        <div class="plano-acoes">
+                            <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="btn-deletar"><i class="fas fa-trash"></i> Deletar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="plano-item">
+                        <div class="plano-info">
+                            <h4>Manuais de Identidade Visual</h4>
+                            <p class="descricao-plano">Definimos cores, tipografias e padrões para garantir consistência.</p>
+                            <p class="status-plano">Status: <span class="status-ativo">Ativo</span></p>
+                        </div>
+                        <div class="plano-acoes">
+                            <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="btn-deletar"><i class="fas fa-trash"></i> Deletar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="plano-item">
+                        <div class="plano-info">
+                            <h4>Materiais Corporativos</h4>
+                            <p class="descricao-plano">Papéis timbrados, envelopes e kits de comunicação empresarial.</p>
+                            <p class="status-plano">Status: <span class="status-ativo">Ativo</span></p>
+                        </div>
+                        <div class="plano-acoes">
+                            <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="btn-deletar"><i class="fas fa-trash"></i> Deletar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário de Adição de Plano -->
+            <div class="plano-form-container">
+                <h3>Adicionar Novo Plano</h3>
+                <form id="form-novo-plano" class="form-plano">
+                    <div class="form-group">
+                        <label for="plano-nome">Nome do Plano:</label>
+                        <input type="text" id="plano-nome" placeholder="Ex: Design de Embalagem" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plano-descricao">Descrição:</label>
+                        <textarea id="plano-descricao" placeholder="Descreva o plano de serviço" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plano-preco">Preço (R$):</label>
+                        <input type="number" id="plano-preco" step="0.01" placeholder="Ex: 150.00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plano-status">Status:</label>
+                        <select id="plano-status" required>
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit-plano">
+                        <i class="fas fa-save"></i> Salvar Plano
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <!-- Faixa branca superior -->
+        <div class="faixa-branca"></div>
+    
+        <!-- Área azul principal com degradê -->
+        <div class="footer-container">
+          <!-- COLUNA 1 -->
+          <div class="footer-col">
+            <h3>Departamentos</h3>
+            <ul>
+              <li><a href="#">Artesanato e Sublimação</a></li>
+              <li><a href="#">Moda e Vestuário</a></li>
+              <li><a href="#">Indústria e Serviços</a></li>
+            </ul>
+          </div>
+    
+          <!-- COLUNA 2 -->
+          <div class="footer-col">
+            <h3>Institucional</h3>
+            <ul>
+              <li><a href="quem-somos-criart.html">Quem somos</a></li>
+              <li><a href="politica-termos-criart.html">Políticas de Privacidade</a></li>
+            </ul>
+          </div>
+    
+          <!-- COLUNA 3 -->
+          <div class="footer-col">
+            <h3>Entre em contato</h3>
+            <ul>
+              <li>📍 R. OUROVERDE-100</li> 
+              <li>📞 (82) 9-9999-9999</li>
+              <li>📧 Criart@gmail.com</li>
+              <li>🕑 Seg - Sex 08:00 às 18:00</li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Área preta inferior com pagamentos e ícones -->
+        <div class="footer-bottom">
+          <div class="meios-pagamento">
+            <h3>Meios de Pagamento</h3>
+            <div class="payments">
+              <img src="static/Img/card_amercian_express_footer.png" alt="American Express">
+              <img src="static/Img/visa_card_footer.png" alt="Visa">
+              <img src="static/Img/mastercard_footer.png" alt="Master Card">
+              <img src="static/Img/hipercard-footer.png">
+              <img src="static/Img/Elo_card_footer.png" alt="Elo">
+            </div>
+          </div>
+    
+          <div class="social-icons">
+            <a href="#"><img src="static/Img/facebook_footer.png" alt="Facebook"></a>
+            <a href="#"><img src="static/Img/instagram_footer.png" alt="Instagram"></a>
+            <a href="#"><img src="static/Img/linkedin_footer.png" alt="LinkedIn"></a>
+            <a href="#"><img src="static/Img/youtube_footer.png" alt="YouTube"></a>
+          </div>
+        </div>
+    
+        <!-- COPYRIGHT -->
+        <div class="footer-copy">
+          © Criarte Materiais - 30130758000105 - 2025. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="static/scriptfile.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/Img/pincel_icon.png">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
+</head>
+<body>
+    <main class="container">
+        <form>
+            <a href="index.html"><h1 class="logo"><img src="static/Img/Logo CriArt.png" alt="CriART"></h1></a>
+            
+
+            <div class="caixa-input">
+                <input placeholder="Email" 
+                type="email">
+                <i class="fa-solid fa-user"></i>
+            </div> 
+
+            <div class="caixa-input">
+                <input placeholder="Senha" type="password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="lembra-password">
+                <label>
+                <input type="checkbox">
+                lembrar senha? 
+                </label>
+                <a href="confirmeemail.html">Esqueci a senha</a>
+            </div>
+
+            <a href="index.html"><button type="submit" class="login">Login</button></a>
+
+            <div class="link-cadastro">
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+
+            <div class="social-login">
+                <button class="btn-google">
+                    <i class="fa-brands fa-google"></i>   
+                </button>
+
+                <button class="btn-facebook">
+                    <i class="fa-brands fa-facebook-f"></i>   
+                </button>
+            </div>
+
+            <div id="toast" class="toast">Mensagem aqui</div>
+
+            <script src="/static/scriptfile.js"></script>
+
+
+        </form>
+    </main>
+</body>
+</html>
