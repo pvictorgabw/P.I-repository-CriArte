@@ -1,0 +1,157 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* RODAPÉ */
+footer {
+  width: 100%;
+  color: #fff;
+}
+
+/* Faixa branca superior */
+.faixa-branca {
+  width: 100%;
+  height: 12px;
+  background-color: #fff;
+}
+
+/* Área azul principal com degradê */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #009A9B 20.19%, #003535 87.5%);
+  color: #fff;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  max-width: 250px;
+}
+
+.footer-col h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Área preta inferior com pagamentos e ícones */
+.footer-bottom {
+  background-color: #000;
+  position: relative; /* para que os ícones absolutos se baseiem aqui */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.meios-pagamento {
+  flex: 1 1 400px;
+}
+
+.meios-pagamento h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.payments {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.payments img {
+  width: 70px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.payments img:hover {
+  transform: scale(1.1);
+}
+
+/* Ícones sociais fixos no canto inferior direito */
+.social-icons {
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+  object-fit: contain;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  background-color: #003535;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin: 20px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px; /* espaço extra pro ícone não sobrepor */
+  }
+
+  .social-icons {
+    position: static;
+    margin-top: 20px;
+  }
+}

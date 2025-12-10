@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.topo {
+    width: 100%;
+    background: linear-gradient(to bottom, #003535 0%, #009A9B 67%);
+    box-shadow: 0 2px 10px #0000001f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-bar {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 165px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background: #efeeee;
+    padding: 5px 12px;
+    border-radius: 20px;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 15px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 8px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 26px;
+}
+
+.carinho {
+    position: relative;
+}
+
+.carinho .conta {
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: -8px;
+    top: -6px;
+}
+
+.cartegoria {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    padding: 15px 0;
+    background: #000000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cartegoria li {
+    cursor: pointer;
+}
+
+.cartegoria a {
+    color: #fdfcfc;
+}
+
+#titulo {
+    background: linear-gradient(90deg, #000000 40%, #00666B 52%);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 35px 0;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.slider {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.manual-navigation {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.manual-btn {
+    width: 13px;
+    height: 13px;
+    border: 2px solid #b2b2b2;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.manual-btn:hover {
+    background-color: #000;
+}
+
+.prev1, .next1 {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.prev1 {
+    left: 10px;
+}
+
+.next1 {
+    right: 10px;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background: linear-gradient(to bottom, #003535 0%, #009A9B 67%);;
+    margin-bottom: 5rem;
+}
+
+.dp {
+    font-size: 26px;
+}
+
+.dp1 {
+    color: #000000;
+}
+
+.linha2      {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background: linear-gradient(to bottom, #003535 0%, #009A9B 67%);;
+    margin-bottom: 5rem;
+}
+
+.dp {
+    font-size: 26px;
+}
+
+.dp1 {
+    color: #000000;
+}
+/* MAIN */
+/* --- ESTILOS PARA O CONTEÚDO PRINCIPAL (TERMOS E POLÍTICA) --- */
+
+.container {
+  padding: 10px;
+  max-width: 900px; /* Define uma largura máxima para o conteúdo central */
+  margin: 30px auto; /* Centraliza o container na tela */
+  color: #333;
+  line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* Estilo para os títulos principais da Política e Termos */
+.titulo-politica-de-privacidade {
+    font-size: 2rem; /* Tamanho do título principal */
+    color: #003535; /* Cor da sua identidade visual */
+    text-align: center;
+    margin: 40px 0 10px 0; /* Espaço antes e depois do título principal */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #009A9B; /* Linha de separação */
+}
+
+/* Estilo para a data de atualização */
+.paragrafo-data {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilo para os parágrafos em geral */
+.container p {
+    margin-bottom: 15px; /* Espaçamento padrão abaixo de parágrafos */
+    text-align: justify; /* Justifica o texto para um visual mais formal */
+}
+
+/* Estilo para a divisão principal dos tópicos */
+.topicos {
+    padding: 0 20px; /* Adiciona um pequeno padding lateral nos tópicos */
+}
+
+/* Estilo para os títulos dos tópicos (h2) */
+.topicos h2 {
+    font-size: 1.3rem; /* Tamanho de fonte para títulos de tópicos */
+    color: #000;
+    margin-top: 35px; /* **ESPAÇAMENTO CRUCIAL ENTRE OS TÓPICOS** */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ccc; /* Linha sutil para separar o título do conteúdo */
+}
+
+/* Estilo para as listas não ordenadas (ul) */
+.topicos ul {
+    margin-left: 20px; /* Recuo para destacar a lista */
+    margin-bottom: 20px; /* Espaço após a lista */
+    list-style-type: disc; /* Garante marcadores de disco */
+}
+
+/* Estilo para os itens da lista (li) */
+.topicos ul li {
+    margin-bottom: 8px; /* Espaçamento entre os itens da lista */
+}
+
+/* MAIN */
+/* RODAPÉ */
+footer {
+  width: 100%;
+  color: #fff;
+}
+
+/* Faixa branca superior */
+.faixa-branca {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Área azul principal com degradê */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #009A9B 20.19%, #003535 87.5%);
+  color: #fff;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  max-width: 250px;
+}
+
+.footer-col h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Área preta inferior com pagamentos e ícones */
+.footer-bottom {
+  background-color: #000;
+  position: relative; /* para que os ícones absolutos se baseiem aqui */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.meios-pagamento {
+  flex: 1 1 400px;
+}
+
+.meios-pagamento h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.payments {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.payments img {
+    width: auto;
+    height: 50px;
+    transition: transform 0.3s;}
+
+.payments img:hover {
+  transform: scale(1.1);
+}
+
+/* Ícones sociais fixos no canto inferior direito */
+.social-icons {
+  margin-top: 3rem;
+  right: 40px;
+  bottom: 25px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+  object-fit: contain;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  background-color: #003535;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVIDADE DA PÁGINA*/
+
+@media (max-width: 768px) {
+
+    .top-bar { /*CABEÇALHO*/
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .search { /*CABEÇALHO*/
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .cartegoria { /*CABEÇALHO*/
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      padding: 10px;
+    }
+
+    #titulo { /*CABEÇALHO*/
+      font-size: 28px;
+      padding: 0 5px;
+    }
+
+    .logo { /*CABEÇALHO*/
+      width: 120px;
+    }
+
+    .prev1, .next1 { /*CABEÇALHO*/
+      font-size: 26px;
+
+
+    }
+
+    .footer-container { /* RODAPÉ */
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      
+  }
+
+  .footer-bottom { /* RODAPÉ */
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .payments img{
+    height: 35px;
+  }
+
+  .social-icons img{ /* RODAPÉ */
+    width: 32px;
+    height: 32px;
+  }
+    .container {
+        margin: 20px auto;
+    }
+    .titulo-politica-de-privacidade {
+        font-size: 1.5rem;
+        margin: 30px 0 10px 0;
+    }
+    .topicos h2 {
+        font-size: 1.1rem;
+        margin-top: 25px;
+    }
+    .topicos {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .login {
+      width: 100px;
+    }
+
+    .login {
+      font-size: 20px;
+    }
+
+    #titulo {
+        font-size: 22px;
+    }
+
+}

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../static/Img/explosion-photo-background-login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    width: 440px;
+    height: 100%;
+    background: linear-gradient(180deg,#009A9B,  #00666C);
+    border: 2px solid #0000005b;
+    border-radius: 20px;
+    color: white;
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.container h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.logo img{
+    width: 180px;
+    max-width: 100%;
+}
+
+.caixa-input{
+    position: relative; /* mantem o elemento na posição inicial , mas visualmente pode-se mover sem afetar os outros elementos*/
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.caixa-input input{
+    width: 100%;
+    height: 100%;
+    background-color:azure;
+    border: 2PX solid #E96A1C;
+    outline: none;
+    border-radius: 20PX;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    padding: 20px 35px 20px 20px;
+}
+
+.caixa-input input::placeholder{
+    color: rgb(53, 52, 52);
+}
+
+.caixa-input i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* top 50% e tranform usado para alinhar os itens no meio de maneira mais eficaz*/
+    font-size: large;
+    color: #000000b9;
+}
+
+.login{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login:hover{
+    background-color: #E96A1C;
+    border: 2px solid #0000005b;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.aceitar-termos{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.aceitar-termos label input{
+    accent-color: #ffffff;
+    margin-right: 5px;
+}
+
+.aceitar-termos label input:hover{
+    color: transparent;
+}
+
+.aceitar-termos a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.aceitar-termos a:hover{
+    text-decoration: underline;
+}

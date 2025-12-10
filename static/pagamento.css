@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.topo {
+    width: 100%;
+    background: linear-gradient(180deg, #F1B545 37%, #BE8F36 51%, #8b6828 80%);
+    box-shadow: 0 2px 10px #0000001f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-bar {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 165px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background: #efeeee;
+    padding: 5px 12px;
+    border-radius: 20px;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 15px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 8px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 26px;
+}
+
+.carinho {
+    position: relative;
+}
+
+.carinho .conta {
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: -8px;
+    top: -6px;
+}
+
+.cartegoria {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    padding: 15px 0;
+    background: #000000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cartegoria li {
+    cursor: pointer;
+}
+
+.cartegoria a {
+    color: #fdfcfc;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .top-bar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .search {
+        order: 3;
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
+    }
+
+    .cartegoria {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    #titulo {
+        font-size: 28px;
+        padding: 0 5px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .prev1, .next1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .login {
+        font-size: 22px;
+    }
+
+    #titulo {
+        font-size: 24px;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+/* ---------- Conteúdo principal ---------- */
+.conteudo {
+    padding: 40px 0;
+    background-color: #007980;
+    text-align: center;
+}
+
+/* ---------- Seção do produto ---------- */
+.produto-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.imagem-produto {
+    background-color: #f18774;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px #004c50;
+}
+
+.imagem-produto img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* ---------- QR Code e Pagamento ---------- */
+.pagamento {
+    background-color: #00a0a8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px #004c50;
+    width: 250px;
+    text-align: center;
+    color: #fff;
+}
+
+.qrcode {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.valor {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.pagamento ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.pagamento ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.btn-copiar {
+    background-color: white;
+    color: #004c50;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-copiar:hover {
+    background-color: #e5a543;
+    color: white;
+}
+
+/* ---------- Descrição ---------- */
+.descricao {
+    color: white;
+    margin-top: 10px;
+}
+
+.descricao h3 {
+    margin: 0;
+}
+
+.descricao span {
+    font-weight: normal;
+}
+
+.avaliacao {
+    color: #ffd700;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* ---------- Recomendações ---------- */
+.recomendacoes {
+    margin-top: 40px;
+}
+
+.recomendacoes h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.produtos-recomendados {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produtos-recomendados img {
+    width: 100px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.produtos-recomendados img:hover {
+    transform: scale(1.1);
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    color: white;
+    font-size: 14px;
+}

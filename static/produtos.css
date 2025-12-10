@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #corpo-produtodestaque {
+    background-color: #f8f8f8;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .produtos {
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .produtos h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background-color: #007c83;
+  }
+  
+  .produtos h2 span {
+    color: #090a0a;
+  }
+  
+  .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.3rem;
+  }
+  
+  /* --- Cartões de produtos --- */
+  .card {
+    
+    display: flex;              /* ✔ ADICIONADO */
+    flex-direction: column;     /* ✔ ADICIONADO */
+    justify-content: space-between; /* ✔ ADICIONADO */
+    min-height: 380px; 
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Gradientes */
+  .coral {
+    background: linear-gradient(180deg, #e47358, #f79a72);
+  }
+  
+  .azul {
+    background: linear-gradient(180deg, #007c83, #00b2b1);
+  }
+  
+  .produto-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .avaliacao {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    color: #fff;
+  }
+  
+  .avaliacao span {
+    opacity: 0.8;
+  }
+  
+  .preco {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: auto; 
+  }
+  
